@@ -1,0 +1,10 @@
+./.github
+./.gitignore
+./configuration.json
+./readme.md
+./history.txt
+./docker-compose.yml
+./embed.pickle
+./Dockerfile
+./history.pickle
+./.*
