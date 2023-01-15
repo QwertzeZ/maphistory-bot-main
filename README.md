@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <h3 align="center">Map History Bot</h3>
+    <h1 align="center">Map History Bot</h1>
     <p align="center">
         A Simple Discord / A2S Bot
     </p>
