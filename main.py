@@ -40,6 +40,8 @@ async def update_map():
 async def on_ready():
     logging.log(logging.INFO, f"We have logged in as {bot.user}")
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"Map History"))
+    queryServer.start()
+    updateEmbed.start()
     asyncio.create_task(start_updating())
 
 async def start_updating():
@@ -123,4 +125,13 @@ async def setup(ctx: commands.Context, *, channelID: int):
         pickle.dump(staticEmbedInfo, embedPickleFile)
 
     await ctx.send(f"Set up embed in {channel.mention}")
+    
+@tasks.loop(seconds=INTERVAL)
+async def updateEmbed():
+    try:
+        await update_staticEmbed()
+    except Exception as e:
+        logging.error(f'An error occurred: {e}')
+    await asyncio.sleep(INTERVAL)
+    
 bot.run(TOKEN)
