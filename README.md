@@ -36,7 +36,7 @@ This is a simple implementation of a discord bot using A2S to query Source (Stea
 
 1.  Clone the project
 2.  Edit your `configuration.json`
-3.  launch `main.py`
+3.  Launch `main.py`
 
 ### Prerequisites
 
@@ -54,16 +54,17 @@ pip3 install discord.py
 pip3 install python-a2s
 ```
 - jaraco.docker
+
 ```sh
 pip3 install jaraco.docker
 ```
 ### Installation
 
-1. Get a discord Bot free Token at [Discord Developer Portal](https://discord.com/developers/applications), you can follow [this guide](https://discordpy.readthedocs.io/en/stable/discord.html) by the [Discord.py](https://github.com/Rapptz/discord.py) team
+1. Get a discord Bot free Token at [Discord Developer Portal](https://discord.com/developers/applications). You can follow [this guide](https://discordpy.readthedocs.io/en/stable/discord.html) by the [Discord.py](https://github.com/Rapptz/discord.py) team
 2. Clone the repo and create a `configuration.json`
 
 ```sh
-gh repo clone QwertzeZ/maphistory-bot-main---Kopie
+gh repo clone QwertzeZ/maphistory-bot-main
 ```
 ```json
 {
@@ -105,7 +106,9 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-use `!history` or `!maps` on your discord in order to display the last 10 Maps
+Use `!history` or `!maps` on your discord in order to display the last 10 Maps
+
+Use `!setup <channel-id>` to set up a channel to host the perma history info
 
 <!-- ROADMAP -->
 
