@@ -86,6 +86,7 @@ async def generate_embed():
     embed.add_field(name="🗺️ Last 10 Maps",
                     value=f"{HISTORY.getFormattedLast10Maps()}", inline=False)
     embed.add_field(name="⌚ Last refresh", value=f"<t:{HISTORY.getLastUpdate()}:R>")
+    embed.set_footer(text="By QwertzeZ")
     return embed
 
 
