@@ -78,7 +78,7 @@ async def queryServer():
 async def generate_embed():
     embed = discord.Embed(title=f"Map History for `{HISTORY.getServerName()}`", description="", color=0xff0000)
     embed.set_author(name="Map History Bot",
-                     url="https://github.com/immervoll/maphistory-bot")
+                     url="https://github.com/QwertzeZ/maphistory-bot-main")
     embed.add_field(name="📍 Current Map",
                     value=f"""{HISTORY.getFormattedCurrentMap()}""", inline=False)
     embed.add_field(name="⌛ Previous Map",
