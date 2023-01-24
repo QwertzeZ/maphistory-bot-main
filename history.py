@@ -66,18 +66,18 @@ class History(object):
         return self.last_maps[-10:]
 
     def getFormattedCurrentMap(self):
-        return f"`{self.current_map}` with `{self.last_maps[-1][1]}` players - since: <t:{self.last_maps[-1][2]}:R>"
+        return f"`{self.current_map}` with `{self.last_maps[-1][1]}` players - <t:{self.last_maps[-1][2]}:R>"
 
     def getFormattedLastMap(self):
         try:
-            return f"`{self.last_map}` with `{self.last_maps[-2][1]}` players - since: <t:{self.last_maps[-2][2]}:R>"
+            return f"`{self.last_map}` with `{self.last_maps[-2][1]}` players - <t:{self.last_maps[-2][2]}:R>"
         except:
             return "`No previous map`"
         
     def getFormattedLast10Maps(self):
         formattedText = ""
         for map_name, players, timestamp in reversed(self.last_maps[-10:]):
-            formattedText += ((f"`{map_name}` with `{players}` players - since: <t:{timestamp}:R>\n"))
+            formattedText += ((f"`{map_name}` with `{players}` players - <t:{timestamp}:R>\n"))
         return formattedText
 
     def getLastUpdate(self):
